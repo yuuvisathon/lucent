@@ -20,7 +20,7 @@ def homepage():
 @app.route('/query', methods = ['POST'])
 def query():
 
-    os.environ['YUUVIS'] = "3f1d89b30d1a46aea1f21de3b4c7ef89"
+    os.environ['YUUVIS'] = ""
     if not request.json:
         abort(400)
     return jsonify(runner(
