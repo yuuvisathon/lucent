@@ -44,8 +44,8 @@ def parse_nstat(yuuvis_data, machine_id, data_type):
 
 
 
-def parse_machine(machine_id, yuuvis_data):
-    parse_nstat(yuuvis_data)
+def parse_machine(machine_id, yuuvis_data, data_type):
+    parse_nstat(yuuvis_data, machine_id, data_type)
 
     return BLOB
 
