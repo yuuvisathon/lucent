@@ -1,6 +1,10 @@
+import os
+
 from flask import Flask, jsonify, request, abort
 from datetime import datetime
 from runner import runner
+
+os.environ['YUUVIS'] = "3f1d89b30d1a46aea1f21de3b4c7ef89"
 
 app = Flask(__name__)
 
