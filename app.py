@@ -1,5 +1,7 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 from datetime import datetime
+from runner import runner
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -12,6 +14,15 @@ def homepage():
 
     <img src="http://loremflickr.com/600/400" />
     """.format(time=the_time)
+
+@app.route('/query')
+def query():
+    if not request.json:
+        abort(400)
+    return jsonify(runner(
+        request.json['machine_id'],
+        request.json['data_type']
+    ))
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
