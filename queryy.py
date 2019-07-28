@@ -14,11 +14,7 @@ def get_object_yuuvis(machine_id, data_type):
     }}
     baseUrl = 'https' + '://' + 'api.yuuvis.io'
 
-    header_name = 'Content-Type'
-
     headerDict['Content-Type'] = 'application/json'
-
-    header_name = 'Ocp-Apim-Subscription-Key'
 
     headerDict['Ocp-Apim-Subscription-Key'] = os.environ["YUUVIS"]
 
@@ -38,7 +34,7 @@ def get_data_yuuvis(return_blob):
     paramDict = {}
     baseUrl = 'https' + '://' + 'api.yuuvis.io'
 
-    headerDict['Ocp-Apim-Subscription-Key'] = ''
+    headerDict['Ocp-Apim-Subscription-Key'] = os.environ["YUUVIS"]
 
     session = requests.Session()
     response = session.get(str(baseUrl+'/dms/objects/%s/contents/file'%objectid), headers=headerDict)
