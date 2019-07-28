@@ -8,18 +8,19 @@ BLOB = {
     "ls": {
         "files": 3,
         "extensions": [1,2,3],
-        "size": {"1": 0.3, "2": 0.3, "3": 0.4}
+        "size": {"1": 0.3, "2": 0.3, "3": 0.4},
         "raw": "aaaa"},
     "netstat": {
         "ports": 0,
         "protocol": [3, 2],
-        "state": [{"LISTEN": 1}]
-        "raw", "aaaa"},
+        "state": [{"LISTEN": 1}],
+        "raw": "aaaa"},
     "ps": {
         "number": 10,
         "top_3": [10, 10, 10],
-        "frequency": [{"9815": 0.5, "10136": 0.5}]
-        "raw", "aaaa"},
+        "frequency": [{"9815": 0.5, "10136": 0.5}],
+        "raw": "aaaa"},
+
     "nmap": {
         "runtime": "4.1",
         "latency": "10,11,17",
@@ -27,7 +28,7 @@ BLOB = {
             "10.123.0.2": 0.25,
             "10.123.0.2": 0.25,
             "10.123.0.2": 0.25,
-            "10.123.0.2": 0.25}]
+            "10.123.0.2": 0.25}],
         "raw": "aaaa"},
     "keylogging": {
         "last_hour": 100,
