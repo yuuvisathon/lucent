@@ -38,8 +38,9 @@ BLOB = {
 }
 
 
-def parse_nstat(yuuvis_data):
-    BLOB["nstat"]["raw"] = yuuvis_data
+def parse_nstat(yuuvis_data, machine_id, data_type):
+    BLOB[data_type]["raw"] = yuuvis_data
+    BLOB[machine_id] = machine_id
 
 
 
